@@ -26,22 +26,38 @@
 
 
 
-### a) Debian 13-Trixie asennus. Hyödynsin tässä kohdassa seuraavaa youtube videota: https://www.youtube.com/watch?v=99yUVmLkqOk
+### a) Debian 13-Trixie asennus. Hyödynsin tässä kohdassa seuraavaa youtube videota: https://www.youtube.com/watch?v=99yUVmLkqOk How To Install Debian 13-Trixie Through Virtual Box
 
 <img width="320" height="493" alt="image" src="https://github.com/user-attachments/assets/cc5a5882-5dcc-4e3e-ae46-0b6a8e18762b" />
 
-  - Minulla oli aluksi ongelma, sillä en voinut suorittaa sudo komentoja terminaalissa, käyttäjäni ei ollut sudo kansiossa -> su - -> usermod -aG sudo tommi -> su - tommi. Nyt pystyin alkaa käyttämään sudoa.
+- Minulla oli aluksi ongelma, sillä en voinut suorittaa sudo komentoja terminaalissa, käyttäjäni ei ollut sudo kansiossa -> `su -` -> `usermod -aG sudo tommi` -> `su - tommi`. Nyt pystyin alkaa käyttämään sudoa.
 
 <img width="301" height="37" alt="image" src="https://github.com/user-attachments/assets/8f9081b5-92c7-40a3-9249-c070f2e12e09" />
 
-- Ennen b) kohtaa suoritin terminaalissa "sudo apt update" "sudo apt upgrade" komennot. Aina ennen uutta ohjelmistoa asentaessa on tärkeää varmistaa uusimman pakettiversion käyttö.
+- Ennen b) kohtaa suoritin terminaalissa `sudo apt update` `sudo apt upgrade` komennot. Aina ennen uutta ohjelmistoa asentaessa on tärkeää varmistaa uusimman pakettiversion käyttö.
 
-### b) Salt (salt-minion) asentaminen Linuxille virtuaalikoneelle.
+### b) Salt (salt-minion) asentaminen Linuxille virtuaalikoneelle. https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
+
 <img width="400" height="220" alt="image" src="https://github.com/user-attachments/assets/9ef15f77-1f0a-4ad0-a9a8-ce5dafdb96c3" />
 
-- 
-- 
+- Alkuun `sudo apt-get update` ja `sudo apt-get install wget`. Tämä mahdollistaa tiedostojen lataamisen verkosta.
+- Sitten olikin aika ladata Salt Linuxille. Seurasin kyseisen sivun Salt install guidea, joka on linkattuna alaotsikossa.
+- Loin keyrings hakemiston avaimille ´mkdir -p /etc/apt/keyrings´, tämän jälkeen latasin julkisen avaimen pitkällä curl -fsSL komennolla. Kyseinen komento hakee tiedoston avaimen URL-osoitteesta ja tallentaa sen salt-archive-keyring.pgp tiedostoon root-oikeuksin.
+<img width="600" height="270" alt="image" src="https://github.com/user-attachments/assets/97e053f9-fbf5-4904-ae3c-57c657118875" />
+
+
+- Sitten lisäsin apt repon Saltille toisella pitkällä curl koodilla
+<img width="450" height="311" alt="image" src="https://github.com/user-attachments/assets/ef3dfbfd-b0a8-4068-9caa-980d61a46654" />
+
+- Ennen Salt mininonin asennusta ajoin komennon `sudo apt update` päivittääkseni metadatan
+- <img width="923" height="148" alt="image" src="https://github.com/user-attachments/assets/75b7e347-b562-4a3e-81a6-9274e682e1a9" />
+- Salt minionin asennus tapahtui `sudo apt-get install salt-minion`
+<img width="1000" height="724" alt="image" src="https://github.com/user-attachments/assets/e1def32f-618a-4244-a6c0-499d46cdee3a" />
+- Lopuksi tarkistin, että salt-minionin asennus oli onnistunut
+- <img width="868" height="239" alt="image" src="https://github.com/user-attachments/assets/1158dafc-a4f9-4083-86f0-5a3290d19877" />
+- Näyttää vihreältä, hyvä :)
 
 ### c) Viisi tärkeintä Saltin tilafunktiota
+
 
 ### d) Idempotentti?

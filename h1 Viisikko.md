@@ -26,13 +26,20 @@
 
 
 
-### a) Debian 13-Trixie asennus.
+### a) Debian 13-Trixie asennus. Hyödynsin tässä kohdassa seuraavaa youtube videota: https://www.youtube.com/watch?v=99yUVmLkqOk
 
 <img width="320" height="493" alt="image" src="https://github.com/user-attachments/assets/cc5a5882-5dcc-4e3e-ae46-0b6a8e18762b" />
 
-### b) Salt (salt-minion) asentaminen Linuxille virtuaalikoneelle.
-<img width="500" height="220" alt="image" src="https://github.com/user-attachments/assets/ef09ef63-315f-48d4-9537-fe4c81fc5003" />
+  - Minulla oli aluksi ongelma, sillä en voinut suorittaa sudo komentoja terminaalissa, käyttäjäni ei ollut sudo kansiossa -> su - -> usermod -aG sudo tommi -> su - tommi. Nyt pystyin alkaa käyttämään sudoa.
 
+<img width="301" height="37" alt="image" src="https://github.com/user-attachments/assets/8f9081b5-92c7-40a3-9249-c070f2e12e09" />
+
+- Ennen b) kohtaa suoritin terminaalissa "sudo apt update" "sudo apt upgrade" komennot. Aina ennen uutta ohjelmistoa asentaessa on tärkeää varmistaa uusimman pakettiversion käyttö.
+
+### b) Salt (salt-minion) asentaminen Linuxille virtuaalikoneelle.
+<img width="400" height="220" alt="image" src="https://github.com/user-attachments/assets/9ef15f77-1f0a-4ad0-a9a8-ce5dafdb96c3" />
+
+- 
 - 
 
 ### c) Viisi tärkeintä Saltin tilafunktiota

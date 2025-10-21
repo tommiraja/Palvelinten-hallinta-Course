@@ -42,7 +42,7 @@
 
 - Alkuun `sudo apt-get update` ja `sudo apt-get install wget`. Tämä mahdollistaa tiedostojen lataamisen verkosta.
 - Sitten olikin aika ladata Salt Linuxille. Seurasin kyseisen sivun Salt install guidea, joka on linkattuna alaotsikossa.
-- Loin keyrings hakemiston avaimille ´mkdir -p /etc/apt/keyrings´, tämän jälkeen latasin julkisen avaimen pitkällä curl -fsSL komennolla. Kyseinen komento hakee tiedoston avaimen URL-osoitteesta ja tallentaa sen salt-archive-keyring.pgp tiedostoon root-oikeuksin.
+- Loin keyrings hakemiston avaimille `mkdir -p /etc/apt/keyrings`, tämän jälkeen latasin julkisen avaimen pitkällä curl -fsSL komennolla. Kyseinen komento hakee tiedoston avaimen URL-osoitteesta ja tallentaa sen salt-archive-keyring.pgp tiedostoon root-oikeuksin.
 <img width="600" height="270" alt="image" src="https://github.com/user-attachments/assets/97e053f9-fbf5-4904-ae3c-57c657118875" />
 
 

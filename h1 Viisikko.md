@@ -62,3 +62,17 @@
 
 
 ### d) Idempotentti?
+
+## Raportissa hyödynnettyjä Lähteitä:
+Sudo-oikeuksien ratkaisussa hyödynsin seuraavaa youtube videota: https://www.youtube.com/watch?v=nwNC8NF70WQ&pp=0gcJCQYKAYcqIYzv
+
+Debian 13-Trixien asentaminen: https://www.debian.org/download
+
+Tero Karvinen, Install Salt On Debian 13 Trixie: https://terokarvinen.com/install-salt-on-debian-13-trixie/
+
+Tero Karvinen, Run Salt Command Locally: https://terokarvinen.com/2021/salt-run-command-locally/
+
+Tero Karvinen, Salt Quickstart - SaltStack Master and Slave On Ubuntu Linux: https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
+
+Tero Karvinen, Raportin Kirjoittaminen: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/
+

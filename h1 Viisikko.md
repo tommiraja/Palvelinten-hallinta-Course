@@ -31,6 +31,8 @@
 
 - Minulla oli aluksi ongelma, sillä en voinut suorittaa sudo komentoja terminaalissa, käyttäjäni ei ollut sudo kansiossa -> `su -` -> `usermod -aG sudo tommi` -> `su - tommi`. Nyt pystyin alkaa käyttämään sudoa.
 
+**- !Huomiona! Joudun kuitenki aina kirjautumaan uudelleen `su - "käyttäjänimi"` eli aloittamaan uuden istunnon. Tämä jää selvitykseen.**
+
 <img width="301" height="37" alt="image" src="https://github.com/user-attachments/assets/8f9081b5-92c7-40a3-9249-c070f2e12e09" />
 
 - Ennen b) kohtaa suoritin terminaalissa `sudo apt update` `sudo apt upgrade` komennot. Aina ennen uutta ohjelmistoa asentaessa on tärkeää varmistaa uusimman pakettiversion käyttö.

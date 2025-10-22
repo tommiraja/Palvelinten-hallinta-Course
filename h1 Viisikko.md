@@ -1,5 +1,5 @@
 # Tehtävä H1 Viisikko
-## Lue ja tiivistä.
+## Lyhyet tiivistelmät artikkeleista.
 
 ### Install Salt On Debian 13 Trixie https://terokarvinen.com/install-salt-on-debian-13-trixie/
 - Salt on konfiguraatiohallintaan tarkoitettu työkaly.
@@ -19,12 +19,7 @@
 - Kirjoita raporttia koko ajan samalla kuin teet.
 - Täsmällinen kertomus tekemästään, mitä tapahtui, miten ongelmat korjattiin...
 - Lähdeviittaukset ovat todella tärkeitä, sekä raportin helppolukuisuus. Huolellinen kieliasu, väliotsikot!!!
-
-
-
-
-
-
+  
 ### a) Debian 13-Trixie asennus. Hyödynsin tässä kohdassa seuraavaa youtube videota: https://www.youtube.com/watch?v=99yUVmLkqOk How To Install Debian 13-Trixie Through Virtual Box
 
 <img width="320" height="493" alt="image" src="https://github.com/user-attachments/assets/cc5a5882-5dcc-4e3e-ae46-0b6a8e18762b" />

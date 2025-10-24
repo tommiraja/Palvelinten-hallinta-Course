@@ -120,7 +120,15 @@ Komento: `sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' c
 - Huomataan, että käyttäjäkohtainen ryhmä ja käyttäjä poistettiin onnistuneesti.
 
 ### d) Idempotentti?
-- 
+- Kuvailee ohjelmiston ominaisuutta, missä samat ja useasti suoritetut komennot / toimenpiteet eivät tee muutosta.
+- Otetaan esimerkiksi tree pkg.installed tilanne.
+<img width="603" height="386" alt="image" src="https://github.com/user-attachments/assets/5aa4d815-9f16-4932-be5e-109079bfabf3" />
+
+- Tree - asennettu, changes = 1. Sitten suoritetaan sama asennus komento uusiksi.
+
+<img width="530" height="335" alt="image" src="https://github.com/user-attachments/assets/8edacd44-647b-44b3-a72a-0021818f2c77" />
+
+- Huomataan, että kommentti kentässä "All specified... already installed. Changes = 0, muutoksia ei siis tapahtunut.
 
 ## Raportissa hyödynnettyjä Lähteitä:
 Sudo-oikeuksien ratkaisussa hyödynsin seuraavaa youtube videota: https://www.youtube.com/watch?v=nwNC8NF70WQ&pp=0gcJCQYKAYcqIYzv

@@ -40,4 +40,10 @@
 
 ## C) Viisikko tiedostossa.
 
-## D) 
+## D)
+
+## Lähteet
+
+## Tehtäviin kulunut aika?
+- Tiivistelmä noin puoli tuntia
+- Tehtäväosiot ?

@@ -146,4 +146,4 @@ Testi:
 
 ## Tehtäviin kulunut aika?
 - Tiivistelmä noin puoli tuntia
-- Tehtäväosiot noin 3h, oli hieman haastavempia tällä kertaa.
+- Tehtäväosiot noin 3-4h, oli hieman haastavempia tällä kertaa.

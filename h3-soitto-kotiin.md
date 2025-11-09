@@ -13,7 +13,7 @@
 - "'*'" ajaa tilan kaikille minioneille
 - Top-file määrittää mitä tiolja ajetaan millekkin orjalle
 
-## Tehtävät tehdään Windows 11 Os koneella, 16gb-ram, 64-bit os. Komentokehotteen kautta.
+## Tehtävät tehdään Windows 11 Os koneella, 16gb-ram, 64-bit os. Komentokehotteen kautta (PowerShell).
 
 ### A) Hello Vagrant!
 

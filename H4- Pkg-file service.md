@@ -100,7 +100,7 @@ Noniin säädön jälkeen jo parempaan päin, katsotaann että tila korjaa puutt
 
 - <img width="532" height="516" alt="image" src="https://github.com/user-attachments/assets/871adf3b-2895-4cd5-98a0-60a3fb7475da" />
 
-Tämä tehtävä oli farssi, mutta jonkin näköseen lopputulokseen onneksi päästiin. Hermo oli koetuksella, sillä onnistuin tuhoamaan ssh yhteydet t001 koneeseen useaan otteeseen, kuitenkin juurisyynä tähän konfiguraatiovirhe sshd_config tiedostossa ja teorian perusteiden omaksuminen työskentelyyn. Aikaa kului ainakin 5h.
+Tämä tehtävä oli farssi, mutta jonkin näköseen lopputulokseen onneksi päästiin. Hermo oli koetuksella, sillä onnistuin tuhoamaan ssh yhteydet t001 koneeseen useaan otteeseen, kuitenkin juurisyynä tähän konfiguraatiovirhe sshd_config tiedostossa ja teorian perusteiden omaksuminen työskentelyyn. Aikaa kului ainakin 3h.
 
 ## Lähteet: 
 

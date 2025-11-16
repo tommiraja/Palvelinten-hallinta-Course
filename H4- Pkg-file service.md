@@ -18,14 +18,41 @@
 
 <img width="704" height="72" alt="image" src="https://github.com/user-attachments/assets/179131d5-4304-440e-89e5-648734e047bd" />
 
-- Lisätään portti 22 kuuntelemaan sshd_config tiedostoon -> `sudo nano /etc/ssh/sshd_config` -> : <img width="116" height="51" alt="image" src="https://github.com/user-attachments/assets/1026b747-588c-48e7-ae24-4e3d937a5150" />
+Annetaan vielä masterin osoite minionille -> `sudoedit etc/salt/minion`
 
-- Tallennus ja restartaan ssh `sudo systemctl restart ssh`
+<img width="174" height="47" alt="image" src="https://github.com/user-attachments/assets/a737d152-65ff-4723-8799-1120260dd67c" />
 
-<img width="609" height="69" alt="image" src="https://github.com/user-attachments/assets/a7a84a5f-eb07-4188-81d4-dcf801d96885" />
-Ongelmatilanne!
-- Täytyy antaa orjalle masterin osoite komennolla `master: 192.168.12.3` tottakai, sitten hyväksyä orjan avain masterilla.
-<img width="357" height="182" alt="image" src="https://github.com/user-attachments/assets/7e9c3b2c-9dd3-41ab-98ab-1fa653285647" />
+Hyväksytään orjan avain master-koneella `sudo salt-key -A`
+
+<img width="377" height="245" alt="image" src="https://github.com/user-attachments/assets/313b5baa-459a-4317-a6ca-7957fa5ee2ed" />
+
+Sitten voidaankin aloittaa varsinainen tehtävä. Lisätään aluksi portti 22 ja 1234 kuuntelemaan `ssh_config` tiedostoon -> `sudo nano ssh_config`
+
+<img width="303" height="60" alt="image" src="https://github.com/user-attachments/assets/536692cd-9fb5-4517-9a08-4eaad0c46d2b" />
+
+Sitten loin uuden hakemiston, johon teen ssh:n sls-tiedoston `sudo mkdir -p /srv/salt/ssh` -> `sudo nano init.sls` -> johon kirjoitin Teron sivuilta saadut konffaukset "Create SSH-state": https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh
+
+<img width="385" height="201" alt="image" src="https://github.com/user-attachments/assets/7c1fffef-efff-4176-ac17-fcfa641ce290" />
+
+Testataan:
+
+<img width="740" height="561" alt="image" src="https://github.com/user-attachments/assets/e84559e6-357a-4072-bb05-dca7a4ecbb1c" />
+
+- Virhetilanne, Salt ei löydä sshd_config tiedostoa masterilta. Korjataan ->
+
+- <img width="765" height="19" alt="image" src="https://github.com/user-attachments/assets/9b741039-f52d-4541-8051-d807d80f2153" />
+
+- <img width="325" height="39" alt="image" src="https://github.com/user-attachments/assets/9a8b08d0-afa6-4983-857a-67e6b541ffcc" />
+
+- 
+
+
+
+
+
+
+
+
 
 
 

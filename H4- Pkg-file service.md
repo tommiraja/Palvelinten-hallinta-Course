@@ -44,7 +44,87 @@ Testataan:
 
 - <img width="325" height="39" alt="image" src="https://github.com/user-attachments/assets/9a8b08d0-afa6-4983-857a-67e6b541ffcc" />
 
-- 
+- Okei virtuaalikoneeni t001 hajosi, en saa enään muodostettua ssh yhteyttä, joten aion tuhota koneen `vagrant destroy t001` komennolla ja sitten aloitan tehtävän alusta. Jatketaan hetken kuluttua, kun saan saltin uudestaan asennettua.
+
+Okei nyt ollaan tääs samassa kohtaa kuin viimeksi. Liitin portit 22 ja 2200 `sudo nano /etc/ssh/sshd_config` ja niiden pitäisi toimia nyt.
+
+<img width="711" height="108" alt="image" src="https://github.com/user-attachments/assets/47bdbca4-343c-4c34-b59c-5a7593cbf14f" />
+
+Eli käsin tehty toimii, sitten kokeillaan automatisoida.
+
+Luodaan uusi hakemisto `Sudo mkdir -p /srv/salt` -> `sudo nano ssh_port.sls -> Luodaan sls-tiedosto
+
+<img width="544" height="449" alt="image" src="https://github.com/user-attachments/assets/b51bee07-46b8-4d8b-a13c-8bcd1d7065ad" />
+
+<img width="590" height="108" alt="image" src="https://github.com/user-attachments/assets/50c362a1-0271-4c9f-8aa1-1ea831da90d6" />
+
+Ajetaan `sudo salt '*' state.apply ssh_port`
+
+<img width="893" height="855" alt="image" src="https://github.com/user-attachments/assets/fd8db7f0-781f-44b5-9bfd-43209f516d65" />
+
+SSH-yhteys tuhoutui uudestaan. Kokeilen seuraavaksi t002 konetta. Asensin Salt-minionin t002 koneeseen, määiritin hostin osoitteen minionille, potkaisin käyntiin, hyväksyin avaimen tmasterilla.
+
+<img width="601" height="991" alt="image" src="https://github.com/user-attachments/assets/ab221b17-aaed-47bf-954d-c24f9eba43a1" />
+
+Noniin säädön jälkeen jo parempaan päin, katsotaann että tila korjaa puutteet t002-koneella.
+
+<img width="636" height="242" alt="image" src="https://github.com/user-attachments/assets/cdc67b00-9854-4a79-b601-6ccc7a89e4b1" />
+
+- Eli poistetaan t002 koneelta ssh-server, sitten ajetaan tila uudestaan tmaster koneella, tämän nyt pitäisi asentaa ssh serveri takaisin minionille.
+
+<img width="717" height="746" alt="image" src="https://github.com/user-attachments/assets/b6f4203f-edf2-4691-b233-f699cee8d357" />
+
+- Toimii! Vikatilanne taisi ilmetä rikkinäisen `sshd_config` tiedoston takia, sitten kun yritin ajaa staten salt restarttasi ssh-palvelun ja siinä oli väärät konfiguraatiot -> ssh-yhteys kaatui. Nyt raporttiani tutkineena olin myös unohtanut mainita, että kun konfiguraatioita muuttaa sshd_config tiedostossa, täytyy ssh sen jälkeen uudelleenkäynnistää.
+- Selvitin ongelmaa tekoälyn (Chat-GPT) avulla, otin virheilmoituksesta kuvakaappauksen tekoälylle ja promptasin "Miten voisin selvittää kyseisen ongelman, niin että ssh-palvelu ei kaadu".
+- Tekoäly ehdotti minulle turvallisemman sls-tiedoston luomista, joka sisältää `ssh_ports_block:` `file.blockreplace` ja `check_sshd_config:` konfiguraatiot
+
+- <img width="519" height="515" alt="image" src="https://github.com/user-attachments/assets/6a2e8af1-7f1d-40c6-968f-47144d40e842" />
+
+- `sudo systemctl restart ssh` ! Demonin potkaisu, kun konffeja muutetaan.
+
+  (Tämän muutoksen jälkeen minulla alkoi toimimaan tilan ajo)
+
+### Tässä vielä recap mitä tein eri tavalla t002-koneella
+
+- <img width="341" height="363" alt="image" src="https://github.com/user-attachments/assets/eeef5e56-2fd0-4496-8c96-aac8487b22d2" />
+
+  - Määritin portit minionille
+
+- <img width="203" height="105" alt="image" src="https://github.com/user-attachments/assets/c269f392-48f6-4db4-8b83-ceae9a7b6ce0" />
+
+  - Määritin minionille masterin osoitteen ja oman id:n
+
+- <img width="256" height="69" alt="image" src="https://github.com/user-attachments/assets/a6e31d94-a5f8-4dfe-a297-733ebaed7f62" />
+
+  - Tein polkuun `srv/salt/ssh_port_t002` sls.tiedoston ja määritin sen konffaukset tekoälyn ehdottamalla tavalla
+
+- <img width="532" height="516" alt="image" src="https://github.com/user-attachments/assets/871adf3b-2895-4cd5-98a0-60a3fb7475da" />
+
+Tämä tehtävä oli farssi, mutta jonkin näköseen lopputulokseen onneksi päästiin. Hermo oli koetuksella, sillä onnistuin tuhoamaan ssh yhteydet t001 koneeseen useaan otteeseen, kuitenkin juurisyynä tähän konfiguraatiovirhe sshd_config tiedostossa ja teorian perusteiden omaksuminen työskentelyyn. Aikaa kului ainakin 5h.
+
+## Lähteet: 
+
+Karvinen 2018: https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh
+
+ChatGPT 5.1: Kuvalähteenä virheilmoitus PowerShell terminaalista ja promptaus "Miten voisin selvittää kyseisen ongelman, niin että ssh-palvelu ei kaadu".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

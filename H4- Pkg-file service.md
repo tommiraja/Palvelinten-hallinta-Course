@@ -74,7 +74,7 @@ Noniin säädön jälkeen jo parempaan päin, katsotaann että tila korjaa puutt
 
 <img width="717" height="746" alt="image" src="https://github.com/user-attachments/assets/b6f4203f-edf2-4691-b233-f699cee8d357" />
 
-- Toimii! Vikatilanne taisi ilmetä rikkinäisen `sshd_config` tiedoston takia, sitten kun yritin ajaa staten salt restarttasi ssh-palvelun ja siinä oli väärät konfiguraatiot -> ssh-yhteys kaatui. Nyt raporttiani tutkineena olin myös unohtanut mainita, että kun konfiguraatioita muuttaa sshd_config tiedostossa, täytyy ssh sen jälkeen uudelleenkäynnistää.
+- Toimii! Vikatilanne taisi ilmetä rikkinäisen `sshd_config` tai sls- tiedoston takia, sitten kun yritin ajaa staten salt restarttasi ssh-palvelun ja siinä oli väärät konfiguraatiot -> ssh-yhteys kaatui. Nyt raporttiani tutkineena olin myös unohtanut mainita, että kun konfiguraatioita muuttaa sshd_config tiedostossa, täytyy ssh sen jälkeen uudelleenkäynnistää.
 - Selvitin ongelmaa tekoälyn (Chat-GPT) avulla, otin virheilmoituksesta kuvakaappauksen tekoälylle ja promptasin "Miten voisin selvittää kyseisen ongelman, niin että ssh-palvelu ei kaadu".
 - Tekoäly ehdotti minulle turvallisemman sls-tiedoston luomista, joka sisältää `ssh_ports_block:` `file.blockreplace` ja `check_sshd_config:` konfiguraatiot
 

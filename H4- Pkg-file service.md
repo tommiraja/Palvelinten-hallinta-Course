@@ -46,6 +46,9 @@ Testataan:
 
 - Okei virtuaalikoneeni t001 hajosi, en saa enään muodostettua ssh yhteyttä, joten aion tuhota koneen `vagrant destroy t001` komennolla ja sitten aloitan tehtävän alusta. Jatketaan hetken kuluttua, kun saan saltin uudestaan asennettua.
 
+<img width="957" height="753" alt="image" src="https://github.com/user-attachments/assets/f1be22f9-1cf8-4cfa-b81b-b2b66e93bc94" />
+
+
 Okei nyt ollaan tääs samassa kohtaa kuin viimeksi. Liitin portit 22 ja 2200 `sudo nano /etc/ssh/sshd_config` ja niiden pitäisi toimia nyt.
 
 <img width="711" height="108" alt="image" src="https://github.com/user-attachments/assets/47bdbca4-343c-4c34-b59c-5a7593cbf14f" />

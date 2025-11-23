@@ -78,6 +78,12 @@ Sitten olikin aika vain puskea gittiin muutokset.
 
 - Kansiot onnistuneesti Gitissä!
 
+- Katsotaan vielä erilaisella komennolla `sudo salt-call --local --file-root=. state.apply salted` -> Tämä ajaa nyt file.managed tilan
+
+<img width="873" height="444" alt="image" src="https://github.com/user-attachments/assets/75c5b5b6-8313-4690-b601-aae9eb9d96cd" />
+
+- Perfect!
+
 Tehtäviin meni 3h aikaa.
 
 ### Lähteet:

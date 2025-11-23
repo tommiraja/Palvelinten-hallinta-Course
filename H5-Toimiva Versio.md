@@ -82,8 +82,8 @@ Tehtäviin meni 3h aikaa.
 
 ### Lähteet:
 
-- https://git-scm.com/book/en/v2
-- https://terokarvinen.com/palvelinten-hallinta/#h5-toimiva-versio
-- https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
-- https://github.com/terokarvinen/suolax/
-- https://github.com/terokarvinen/suolax/commits/main/
+- Chacon and Straub 2014: https://git-scm.com/book/en/v2
+- Karvinen (vinkit osio):  https://terokarvinen.com/palvelinten-hallinta/#h5-toimiva-versio
+- Chacon and Straub 2014: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
+- Suolax repository, Karvinen Tero: https://github.com/terokarvinen/suolax/
+- Karvinenm Tero: https://github.com/terokarvinen/suolax/commits/main/

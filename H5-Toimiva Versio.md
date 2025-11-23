@@ -74,6 +74,8 @@ Sitten olikin aika vain puskea gittiin muutokset.
 
 <img width="603" height="271" alt="image" src="https://github.com/user-attachments/assets/6b537d82-ec9d-4e62-a436-545800fcfb19" />
 
+<img width="664" height="284" alt="image" src="https://github.com/user-attachments/assets/f32902a7-a0b9-4745-b58e-c297f0677186" />
+
 - Kansiot onnistuneesti Gitissä!
 
 Tehtäviin meni 3h aikaa.
